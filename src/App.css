@@ -28,7 +28,27 @@ header {
 
   & .appTitle {
     width: 20vw;
-    color: inherit;
+    color: white;
+    background: linear-gradient(
+      90deg,
+      white 0%,
+      white 25%,
+      orange 40%,
+      lightblue 60%,
+      lightgreen 75%,
+      white 100%
+    );
+    background-size: 400% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 0% 0%;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      animation: titleGradientSlide 5s linear infinite;
+    }
   }
 
   & #routesContainer {
@@ -44,10 +64,27 @@ header {
     }
 
     & a:hover {
-      background-color: lightgray;
+      &.basicsLink {
+        background-color: orange;
+      }
+      &.flexLink {
+        background-color: lightblue;
+      }
+      &.gridLink {
+        background-color: lightgreen;
+      }
       color: black;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
+  }
+}
+
+@keyframes titleGradientSlide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 400% 0%;
   }
 }
 
@@ -60,22 +97,22 @@ main {
 footer {
   display: flex;
   height: 5rem;
-  padding: 1rem;
-  background: #242424;
+  padding: 1rem 4rem;
+  background-color: rgb(75, 75, 75);
   cursor: pointer;
   outline: 0px solid lightgray;
   transition: all 0.1s ease-in-out;
 
   & > span {
-    color: #242424;
+    color: white;
     background: linear-gradient(
       90deg,
-      #242424 0%,
-      #242424 25%,
-      lightgray 40%,
-      lightgray 60%,
-      #242424 75%,
-      #242424 100%
+      white 0%,
+      white 25%,
+      rgb(75, 75, 75) 40%,
+      rgb(75, 75, 75) 60%,
+      white 75%,
+      white 100%
     );
     background-size: 400% 100%;
     background-clip: text;

@@ -9,9 +9,15 @@ function App() {
           <h2> CSS Breakdown </h2>
         </Link>
         <div id="routesContainer">
-          <Link to="/basics">Basics</Link>
-          <Link to="/flex">Flex</Link>
-          <Link to="/grid">Grid</Link>
+          <Link className="basicsLink" to="/basics">
+            Basics
+          </Link>
+          <Link className="flexLink" to="/flex">
+            Flex
+          </Link>
+          <Link className="gridLink" to="/grid">
+            Grid
+          </Link>
         </div>
       </header>
       <main>
