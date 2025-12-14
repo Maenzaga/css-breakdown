@@ -1,0 +1,298 @@
+.contaner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.title {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.separator {
+  width: 80%;
+  height: 2px;
+  background-color: gray;
+  margin: 2rem 0;
+}
+
+#absoluteUnits {
+  & div {
+    display: flex;
+  }
+  & #pixels {
+    border-bottom: 1px solid orange;
+  }
+  & #points {
+    border-bottom: 1pt solid orange;
+  }
+  & #inches {
+    border-bottom: 1in solid orange;
+  }
+  & #centimeters {
+    border-bottom: 1cm solid orange;
+  }
+}
+
+#relativeUnits {
+  & div {
+    display: flex;
+  }
+  & #ems {
+    border-bottom: 1em solid orange;
+  }
+  & #rems {
+    border-bottom: 1rem solid orange;
+  }
+  & #percentages {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 25%; /* percentage of the element's height */
+      background: orange;
+    }
+    border-bottom: 50% solid orange;
+  }
+  & #viewportWidth {
+    border-bottom: 1vw solid orange;
+  }
+  & #viewportHeight {
+    border-bottom: 1vh solid orange;
+  }
+}
+
+#boxmodel {
+  & p:not(:first-child) {
+    color: black;
+  }
+  & .horizontal > p,
+  & .horizontal > #marginContainer {
+    width: 20vw;
+  }
+  & #marginContainer {
+    display: flex;
+    align-items: center;
+    border-block: solid 2px orange;
+
+    &:hover > #margin {
+      margin: 1.5rem 0;
+    }
+  }
+  & #margin {
+    color: blue;
+    padding: 1rem;
+    border: 2px solid orange;
+    margin: 12px 0;
+    box-shadow: inset 0 0 0 1rem green;
+    background: #a8c7fa;
+    transition: margin 0.3s ease-in-out;
+  }
+  & #border {
+    border: 2px solid orange;
+    padding: 1rem;
+    background: #a8c7fa;
+    background-clip: border-box, content-box;
+    box-shadow: inset 0 0 0 1rem green;
+    transition: border-width 0.3s ease-in-out;
+
+    & p:first-child {
+      color: orange;
+    }
+
+    &:hover {
+      border-width: 1rem;
+    }
+  }
+  & #padding {
+    border: 2px solid orange;
+    padding: 1rem;
+    background: #a8c7fa;
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 1rem green;
+    transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    & p:first-child {
+      color: green;
+    }
+
+    &:hover {
+      padding: 2rem;
+      box-shadow: inset 0 0 0 2rem green;
+    }
+  }
+  & #outline {
+    padding: 1rem;
+    border: 2px solid orange;
+    outline: 2px solid red;
+    background: #a8c7fa;
+    box-shadow: inset 0 0 0 1rem green;
+    background-clip: content-box;
+    transition: outline-width 0.3s ease-in-out;
+
+    & p:first-child {
+      color: red;
+    }
+
+    &:hover {
+      outline-width: 1rem;
+    }
+  }
+}
+
+#positioning {
+  & .positioningExamples {
+    color: black;
+    position: relative;
+    max-height: 17rem;
+  }
+
+  #static {
+    position: static;
+    background: lightblue;
+    padding: 1rem;
+    border: 2px solid blue;
+    overflow-y: auto;
+    min-width: min-content;
+    transition: all 0.3s ease;
+
+    &:hover {
+      & p:first-child {
+        color: blue;
+      }
+      & .separator {
+        background-color: blue;
+      }
+    }
+  }
+
+  #relative {
+    position: relative;
+    background: lightgreen;
+    padding: 1rem;
+    border: 2px solid green;
+    min-width: min-content;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    transition: top 0.3s ease, left 0.3s ease;
+
+    &:hover {
+      top: -20px;
+      left: 10px;
+
+      & p:first-child {
+        color: green;
+      }
+      & .separator {
+        background-color: green;
+      }
+    }
+  }
+
+  #absolute {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: lightyellow;
+    padding: 1rem;
+    border: 2px solid orange;
+    min-width: 20rem;
+    max-width: 20rem;
+
+    & span {
+      position: absolute;
+      width: 18rem;
+      top: 10px;
+      right: 10px;
+      transition: top 0.3s ease-in-out, right 0.3s ease-in-out;
+    }
+
+    &:hover span {
+      top: -50px;
+      right: 50px;
+
+      & p:first-child {
+        color: orange;
+      }
+      & .separator {
+        background-color: orange;
+      }
+    }
+  }
+
+  #fixed {
+    position: relative;
+    background: lightcoral;
+    min-width: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    border: 2px solid red;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    &:hover {
+      & p:last-child {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border: 2px solid red;
+        background: lightcoral;
+      }
+      & p:first-child {
+        color: red;
+      }
+      & .separator {
+        background-color: red;
+      }
+    }
+  }
+
+  #sticky {
+    background: lavender;
+    max-height: 17rem;
+    padding: 0 1rem 1rem 1rem;
+    border: 2px solid purple;
+    overflow-y: hidden;
+    min-width: 15rem !important;
+
+    & .separator {
+      position: sticky;
+      top: 3.5rem;
+      z-index: 2;
+      margin: 0 0;
+    }
+
+    & p:first-child {
+      color: black;
+      background: lavender;
+      position: sticky;
+      margin: 0;
+      padding: 2rem 0;
+      top: 0px;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      overflow-y: scroll;
+      & p:first-child {
+        color: purple;
+      }
+      & .separator {
+        background-color: purple;
+      }
+    }
+  }
+}
