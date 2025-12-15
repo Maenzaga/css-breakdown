@@ -1,7 +1,7 @@
 import styles from "./Selectors.module.css";
 export function Selectors() {
   return (
-    <section className={styles.selectorsSection}>
+    <div className={styles.selectorsSection}>
       <h1>CSS Selectors</h1>
 
       <div className={styles.intro}>
@@ -29,7 +29,9 @@ export function Selectors() {
           when overriding third-party styles you can't modify.
         </p>
         <p>
-          <a href="#quickReference">Jump to Quick Reference →</a>
+          <a href="#quickReference" id={styles.quickReferenceLink}>
+            Jump to Quick Reference →
+          </a>
         </p>
       </div>
 
@@ -542,6 +544,6 @@ export function Selectors() {
           </li>
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

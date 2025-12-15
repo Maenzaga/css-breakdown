@@ -27,7 +27,7 @@ export function Flex() {
   };
 
   return (
-    <div className={styles.flexPage}>
+    <div className={styles.container}>
       <aside className={styles.controlPanel}>
         <h2 className={`${styles.title}`}>Flexbox Controls</h2>
 

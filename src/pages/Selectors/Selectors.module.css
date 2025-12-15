@@ -1,6 +1,12 @@
 .selectorsSection {
   padding-inline: 20vw;
   color: white;
+  caret-color: #db6c79;
+
+  &::selection {
+    background-color: #db6c79;
+    color: #242424;
+  }
 
   & h1 {
     font-size: 3rem;
@@ -153,6 +159,24 @@
   }
 }
 
+#quickReferenceLink {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #db6c79;
+  text-decoration: none;
+  outline: 1px solid #db6c79;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    outline 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #db6c79;
+    color: black;
+    outline: 3px dashed #e25667;
+  }
+}
 .referenceTable {
   width: 100%;
   border-collapse: collapse;

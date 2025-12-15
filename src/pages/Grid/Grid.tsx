@@ -44,7 +44,7 @@ export function Grid() {
   };
 
   return (
-    <div className={styles.gridPage}>
+    <div className={styles.container}>
       <aside className={styles.controlPanel}>
         <h2 className={`${styles.title}`}>Grid Controls</h2>
 

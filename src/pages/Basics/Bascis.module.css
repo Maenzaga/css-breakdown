@@ -1,6 +1,12 @@
 .container {
   padding-inline: 20vw;
   color: white;
+  caret-color: orange !important;
+
+  &::selection {
+    background-color: orange;
+    color: #242424;
+  }
 
   & h1 {
     font-size: 3rem;

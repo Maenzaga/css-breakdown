@@ -1,8 +1,14 @@
-.flexPage {
+.container {
   display: flex;
   height: -webkit-fill-available;
   gap: 0;
   padding-inline: 15vw;
+  caret-color: lightblue;
+
+  &::selection {
+    background-color: lightblue;
+    color: #242424;
+  }
 }
 
 .controlPanel {
@@ -26,7 +32,7 @@
     background: #1a1a1a;
     margin: 0;
     padding-block: 1rem;
-    color: white;
+    color: lightblue;
   }
 }
 
@@ -56,6 +62,8 @@
 
   &:last-child {
     border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   & > label {
