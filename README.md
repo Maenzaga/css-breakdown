@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# CSS Breakdown
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An **interactive, visual learning platform** for understanding CSS fundamentals. This project breaks down core CSS concepts into digestible, hands-on modules with live previews and real-time experimentation.
 
-Currently, two official plugins are available:
+## What You'll Learn
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Explore CSS through interactive modules:
 
-## React Compiler
+- **Intro**: Overview of CSS, browser differences, and core capabilities
+- **Basics**: CSS units (px, em, rem, %, vw, vh) and the box model
+- **Flex**: Master Flexbox layout with interactive controls
+- **Grid**: Explore CSS Grid with dynamic configuration panels
+- **Selectors**: Deep dive into CSS selectors, specificity, and combinators
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Each module features:
 
-## Expanding the ESLint configuration
+- Live, editable examples
+- Interactive control panels to tweak CSS properties in real-time
+- Visual feedback to understand how changes affect layout and styling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Ensure you have **Node.js** installed ([download here](https://nodejs.org/)). pnpm will be installed alongside Node.js.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Install pnpm (if you don't have it)
+
+```bash
+npm install -g pnpm
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Verify installation:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm --version
 ```
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/Maenzaga/css-breakdown.git
+cd css-breakdown
+```
+
+### 3. Install Dependencies
+
+```bash
+pnpm install
+```
+
+### 4. Run the Development Server
+
+```bash
+pnpm dev
+```
+
+Open your browser to the URL shown in the terminal (typically `http://localhost:5173`).
+
+### 5. Build for Production
+
+```bash
+pnpm build
+```
+
+The optimized build will be in the `dist/` directory.
+
+## Tech Stack
+
+- **React 19** - UI framework
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool
+- **CSS Modules** - Scoped styling
+- **React Router** - Navigation between pages
+
+## Project Structure
+
+```
+src/
+├── pages/
+│   ├── Intro/          # Introduction to CSS
+│   ├── Basics/         # Units and box model
+│   ├── Flex/           # Flexbox playground
+│   ├── Grid/           # Grid playground
+│   └── Selectors/      # Selector reference
+├── App.tsx             # Main app component
+├── App.css             # Global styles
+└── main.tsx            # Entry point
+```
+
+## Tips for Learning
+
+1. **Play with controls**: Each module has interactive elements—experiment to see CSS behavior in real-time
+2. **Inspect with DevTools**: Use your browser's DevTools to understand how CSS properties map to layout
+3. **Reference the tables**: The Selectors page includes a quick reference table for common CSS patterns
+4. **Hover and interact**: Many elements have interactive animations—hover to see effects
+
+## License
+
+MIT

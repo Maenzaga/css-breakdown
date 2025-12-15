@@ -47,3 +47,33 @@
     caret-color: purple;
   }
 }
+
+.conclusion {
+  background: linear-gradient(
+    90deg,
+    white 0%,
+    white 25%,
+    orange 40%,
+    #db6c79 55%,
+    lightblue 70%,
+    lightgreen 85%,
+    white 100%
+  );
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0% 0%;
+  font-weight: bold;
+
+  animation: gradientSlide 5s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 400% 0%;
+  }
+}

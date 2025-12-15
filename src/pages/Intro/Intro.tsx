@@ -87,7 +87,7 @@ export const Intro = () => {
 
       <hr />
 
-      <p className={styles.paragraph}>
+      <p className={`${styles.paragraph} ${styles.conclusion}`}>
         CSS transforms static HTML into interactive, responsive, and visually
         engaging experiences.
       </p>
