@@ -9,6 +9,9 @@ function App() {
           <h2> CSS Breakdown </h2>
         </Link>
         <div id="routesContainer">
+          <Link className="selectorsLink" to="/selectors">
+            Selectors
+          </Link>
           <Link className="basicsLink" to="/basics">
             Basics
           </Link>

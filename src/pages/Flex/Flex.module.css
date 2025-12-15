@@ -14,6 +14,11 @@
   overflow-y: auto;
   border-right: 2px solid #444;
   border-radius: 0.5rem;
+  transition: border-color 0.3s ease-in-out;
+
+  &:hover {
+    border-color: lightblue;
+  }
 
   & .title {
     position: sticky;
@@ -84,7 +89,7 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 0.25rem;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       background: lightblue;
@@ -134,7 +139,7 @@
   border-radius: 0.25rem;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     border-color: lightblue;
@@ -174,7 +179,7 @@
   background: rgba(255, 255, 255, 0.02);
   border-radius: 0.5rem;
   overflow-y: auto;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Gap classes */
@@ -275,7 +280,7 @@
   border-radius: 0.5rem;
   flex-grow: 0;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
   &:hover {

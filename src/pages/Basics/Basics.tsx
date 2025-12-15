@@ -3,11 +3,16 @@ import styles from "./Bascis.module.css";
 export function Basics() {
   return (
     <div className={styles.container}>
-      <section>
-        <h2 className={styles.title}>Units</h2>
-        <p>Learn about different CSS units like px, em, rem, %, vw, vh, etc.</p>
+      <h1 className={styles.header}>CSS Basics</h1>
+
+      <section className={styles.section}>
+        <h2 className={`${styles.title} ${styles.heading}`}>Units</h2>
+        <div className={styles.separator}></div>
         <div id={styles.absoluteUnits}>
-          <h3>Absolute Units</h3>
+          <p>
+            Learn about different CSS units like px, em, rem, %, vw, vh, etc.
+          </p>
+          <h3 className={styles.heading}>Absolute Units</h3>
           <p>Useful for printing, not so much for sizing element's on screen</p>
           <div className={styles.horizontal}>
             <div id={styles.pixels}>
@@ -26,7 +31,7 @@ export function Basics() {
         </div>
 
         <div id={styles.relativeUnits}>
-          <h3>Relative Units</h3>
+          <h3 className={styles.heading}>Relative Units</h3>
           <div className={styles.horizontal}>
             <div id={styles.ems}>
               <p>
@@ -49,46 +54,46 @@ export function Basics() {
         </div>
       </section>
 
-      <div className={styles.separator}></div>
-
-      <section id={styles.boxmodel}>
-        <h2>Box Model</h2>
+      <section className={styles.section} id={styles.boxmodel}>
+        <h2 className={styles.heading}>Box Model</h2>
+        <div className={styles.separator}></div>
         <div className={styles.horizontal}>
           <p>
             Understand the CSS box model including content, padding, border, and
             margin.
           </p>
-          <div id={styles.marginContainer}>
-            <p id={styles.margin}>
-              <p className="bold">Margin: Transparent</p>
+          <div id={styles.boxesContainer}>
+            <div id={styles.marginContainer}>
+              <p id={styles.margin}>
+                <p className="bold">Margin: Transparent</p>
+                <div className={styles.separator}></div>
+                Space between element and its neighbors, displaces surrounding
+                elements in unpredictable ways
+              </p>
+            </div>
+            <p id={styles.border}>
+              <p className="bold">Border: Yellow</p>
               <div className={styles.separator}></div>
-              Space between element and its neighbors, displaces surrounding
-              elements in unpredictable ways
+              Sits between margin and padding, affects element's size
+            </p>
+            <p id={styles.padding}>
+              <p className="bold">Padding: Green</p>
+              <div className={styles.separator}></div>
+              Space between border and element's content, displaces surrounding
+              elements intuitively
+            </p>
+            <p id={styles.outline}>
+              <p className="bold">Outline: Red</p>
+              <div className={styles.separator}></div>
+              Does not affect element's size
             </p>
           </div>
-          <p id={styles.border}>
-            <p className="bold">Border: Yellow</p>
-            <div className={styles.separator}></div>
-            Sits between margin and padding, affects element's size
-          </p>
-          <p id={styles.padding}>
-            <p className="bold">Padding: Green</p>
-            <div className={styles.separator}></div>
-            Space between border and element's content, displaces surrounding
-            elements intuitively
-          </p>
-          <p id={styles.outline}>
-            <p className="bold">Outline: Red</p>
-            <div className={styles.separator}></div>
-            Does not affect element's size
-          </p>
         </div>
       </section>
 
-      <div className={styles.separator}></div>
-
-      <section id={styles.positioning}>
-        <h2>Positioning</h2>
+      <section className={styles.section} id={styles.positioning}>
+        <h2 className={styles.heading}>Positioning</h2>
+        <div className={styles.separator}></div>
         <p>
           Explore CSS positioning techniques: static, relative, absolute, fixed,
           and sticky (hover over each element to see positioning effect).
