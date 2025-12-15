@@ -17,10 +17,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 4rem;
   text-align: center;
   padding: 1rem;
   background-color: rgb(75, 75, 75);
+  transition: outline 0.1s ease-in-out;
+
+  &:hover {
+    outline: 2px solid lightgray;
+  }
 
   & a {
     text-decoration: none;
@@ -101,14 +106,14 @@ main {
 
 footer {
   display: flex;
-  height: 5rem;
-  padding: 1rem 4rem;
+  height: 4rem;
+  padding: 1rem;
   background-color: rgb(75, 75, 75);
-  cursor: pointer;
   outline: 0px solid lightgray;
   transition: all 0.1s ease-in-out;
 
   & > span {
+    width: 20vw;
     color: white;
     background: linear-gradient(
       90deg,
@@ -124,9 +129,10 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: 0% 0%;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    transition: outline 0.3s ease-in-out;
   }
 
   &:hover {

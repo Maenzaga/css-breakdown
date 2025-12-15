@@ -17,13 +17,13 @@
   -webkit-text-fill-color: transparent;
 
   &:first-child {
+    margin-top: 0;
     font-size: 2.5rem;
   }
 }
 
 .paragraph,
 .title {
-  caret-shape: underscore;
   animation: rainbow 6s linear infinite;
 }
 
