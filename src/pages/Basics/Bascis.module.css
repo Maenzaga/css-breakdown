@@ -318,7 +318,6 @@
     padding: 0 1rem 1rem 1rem;
     border: 2px solid purple;
     overflow-y: hidden;
-    min-width: 15rem !important;
 
     & .separator {
       position: sticky;
